@@ -21,7 +21,7 @@ class DoodlesIndexManagerController extends modExtraManagerController {
     public function process(array $scriptProperties = array()) {}
     public function getPageTitle() { return $this->modx->lexicon('doodles'); }
     public function loadCustomCssJs() {
-        //$this->addJavascript($this->doodles->config['jsUrl'].'mgr/widgets/doodles.grid.js');
+        $this->addJavascript($this->doodles->config['jsUrl'].'mgr/widgets/doodles.grid.js');
         $this->addJavascript($this->doodles->config['jsUrl'].'mgr/widgets/home.panel.js');
         $this->addLastJavascript($this->doodles->config['jsUrl'].'mgr/sections/index.js');
     }

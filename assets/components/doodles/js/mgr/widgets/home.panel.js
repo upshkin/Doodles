@@ -19,11 +19,11 @@ Doodles.panel.Home = function(config) {
                     html: '<p>'+_('doodles.management_desc')+'</p>'
                     ,border: false
                     ,bodyCssClass: 'panel-desc'
-                }/*,{
+                },{
                  xtype: 'doodles-grid-doodles'
                  ,cls: 'main-wrapper'
                  ,preventRender: true
-                 }*/]
+                 }]
             }]
             // only to redo the grid layout after the content is rendered
             // to fix overflow components' panels, especially when scroll bar is shown up
