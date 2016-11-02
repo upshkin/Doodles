@@ -27,6 +27,25 @@ Doodles.grid.Doodles = function(config) {
             ,width: 350
             ,editor: { xtype: 'textfield' }
         }]
+        ,tbar:[{
+            xtype: 'textfield'
+            ,id: 'doodles-search-filter'
+            ,emptyText: _('doodles.search...')
+            ,listeners: {
+                'change': {fn:this.search,scope:this}
+                ,'render': {fn: function(cmp) {
+                    new Ext.KeyMap(cmp.getEl(), {
+                        key: Ext.EventObject.ENTER
+                        ,fn: function() {
+                            this.fireEvent('change',this);
+                            this.blur();
+                            return true;
+                        }
+                        ,scope: cmp
+                    });
+                },scope:this}
+            }
+        }]
     });
     Doodles.grid.Doodles.superclass.constructor.call(this,config)
 };
