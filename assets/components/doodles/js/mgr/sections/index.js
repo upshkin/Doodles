@@ -1,5 +1,6 @@
 Ext.onReady(function() {
     MODx.load({ xtype: 'doodles-page-home'});
+    //Ext.MessageBox.alert('Мой заголовок','Модель DOM готова...');
 });
 Doodles.page.Home = function(config) {
     config = config || {};
